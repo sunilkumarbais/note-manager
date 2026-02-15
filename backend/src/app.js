@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: "https://notes-manager-01.netlify.app/",
+  origin: "https://notes-manager-01.netlify.app",
   credentials: true
 }));
 
