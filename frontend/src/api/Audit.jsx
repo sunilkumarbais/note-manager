@@ -1,6 +1,6 @@
 const Audit = () => {
   const BASE = import.meta.env.VITE_SERVER_URL;
-  
+
   const register = async (data) => {
     return await fetch(`${BASE}/auth/register`, {
       method: "POST",
@@ -14,6 +14,7 @@ const Audit = () => {
     });
   };
   const login = async (data) => {
+    console.log("Login data:", data.userName); // Debugging log
     return await fetch(`${BASE}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },

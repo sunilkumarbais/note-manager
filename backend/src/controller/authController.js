@@ -32,8 +32,8 @@ export const registerUser = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "lax",
-      secure: false
+      secure: true,
+      sameSite: "none",
     });
 
     res.status(201).json({
@@ -91,8 +91,8 @@ export const loginUser = async (req, res) => {
   const token = generateToken(user._id);
   res.cookie("token", token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: false
+    secure: true,
+    sameSite: "none",
   });
 
   res.status(200).json({
