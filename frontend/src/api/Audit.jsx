@@ -1,6 +1,6 @@
 const Audit = () => {
-  const BASE = "http://localhost:5000/api";
-
+  const BASE = import.meta.env.VITE_SERVER_URL;
+  
   const register = async (data) => {
     return await fetch(`${BASE}/auth/register`, {
       method: "POST",
